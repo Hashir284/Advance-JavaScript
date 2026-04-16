@@ -1,0 +1,16 @@
+let students = [
+    { id: 1, name: "Test 1", age: 12, batch: 17 },
+    { id: 2, name: "Test 2", age: 22, batch: 17 },
+    { id: 3, name: "Test 3", age: 16, batch: 18 },
+    { id: 4, name: "Test 4", age: 32, batch: 17 },
+    { id: 5, name: "Test 5", age: 18, batch: 18 },
+    { id: 6, name: "Test 6", age: 25, batch: 18 },
+    { id: 7, name: "Test 7", age: 26, batch: 17 },
+    { id: 8, name: "Test 8", age: 13, batch: 18 },
+    { id: 9, name: "Test 9", age: 14, batch: 18 },
+    { id: 10, name: "Test 10", age: 15, batch: 18 }
+];
+
+let studentById = students.find((student) => student.id >= 5);
+console.log(studentById);
+

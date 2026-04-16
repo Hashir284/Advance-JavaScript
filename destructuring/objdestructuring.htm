@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructure</title>
+</head>
+
+<body>
+
+    <script>
+        let obj = {
+            property1: "value1",
+            property2: "value2",
+            property3: "value3",
+            property4: "value4",
+            property5: "value5",
+            property6: "value6",
+            property7: "value7",
+            property8: "value8",
+            property9: "value9",
+            property10: "value10",
+            property11: "value11",
+            property12: "value12",
+            property13: "value13",
+            property14: "value14",
+            property15: "value15",
+            property16: "value16",
+        };
+
+        let { property1, property3, property12, property14, ...filteredObj } = obj;
+        console.log(obj);
+        console.log(filteredObj);
+        console.log(property12);
+        
+        
+    </script>
+</body>
+
+</html>
