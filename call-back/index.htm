@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call-back</title>
+</head>
+
+<body>
+
+
+    <script>
+        const loadScript = (src, callback) => {
+            let script = document.createElement('script')
+            script.onload = callback('Harry')
+            document.head.append(script)
+        }
+
+        const callback = (argument) => {
+            console.log(argument);
+        }
+        loadScript(
+            'https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js',
+            callback
+        )
+
+        function namee(params) {
+            console.log(params);
+        }
+        function namer(params) {
+            console.log(params);
+        }
+        function name2(parama, value) {
+            parama(value)
+        }
+        name2(namee, 'hashir')
+        name2(namer, 'ibsam')
+
+
+    </script>
+</body>
+
+</html>
