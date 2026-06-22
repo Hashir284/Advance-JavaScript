@@ -34,9 +34,18 @@ prom2
 // ager reject hui toh reason
 // let p3 = Promise.race([prom1, prom2]) // jo pehle Promise resolve ya reject ho woh ho miljayega
 // let p3 = Promise.any([prom1, prom2]) // jonsa promise solve hojaega woh miljayega
-// let p3 = Promise.reject(prom1) // rejecDirectly resulted rejected from his banana. Custom promises. Thank you so much for watching this video and see you. Next time. t
-let p3 = Promise.resolve(prom1) // resolve
+// let p3 = Promise.reject(prom1) // rejectDirectly resulted rejected 
+// let p3 = Promise.resolve(prom1) // resolve
 
 
-p3.then((a)=>{console.log('p3',a);})
-.catch((err)=>{console.log('p3',err);})
+setTimeout(()=>{
+    p3.then((a)=>{console.log('p3',a);})
+    .catch((err)=>{console.log('p3',err);})
+},100)
+
+// p3.then((a)=>{console.log('p3',a);})
+// .catch((err)=>{console.log('p3',err);})
+
+// setTimeout(()=>{
+//     console.log('promm1',prom1);
+// },100)

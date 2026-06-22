@@ -1,4 +1,9 @@
-let login = false
+let myPromise1 = new Promise((resole,rej)=>{
+    resole('Welcome')
+})
+myPromise1.then((res)=>console.log(res)).catch((err)=>console.log(err))
+
+let login = true
 let myPromise = new Promise((resolve, reject) => {
     if (login) {
         resolve({ status: 1, msg: 'Login Done' })
@@ -6,7 +11,6 @@ let myPromise = new Promise((resolve, reject) => {
         reject({ status: 0, msg: 'Invalid username or password' })
     }
 })
-console.log(myPromise);
 
 myPromise
 .then((response) => {
@@ -15,3 +19,6 @@ myPromise
 .catch((err) => {
     console.log(err, 'err');
 })
+
+console.log(myPromise);
+

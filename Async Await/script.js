@@ -11,8 +11,12 @@ console.log('Loading modules');
 console.log('Dp something else');
 
 console.log('Load data');
-let data = getData()
+
+async function name(params) {
+    let data = await getData()
 console.log(data);
+}
+name()
 
 console.log('Process data');
 

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Higher Order Function</title>
+  </head>
+  <body>
+    <script>
+      // Higher Order Function: Ek aesa function jo as an argument 1 function accept kre ya 1 function return
+      // Callback Function: Ek aesa function jo as an argument pass
+
+      const higherOrderFunc = (num1, num2, cb) => {
+        // Higher Order Function
+        let result = num1 + num2;
+        cb(result);
+      };
+
+      const myFunc = (totalNum) => {
+        alert(totalNum);
+      }; // Callback Function
+
+      higherOrderFunc(2, 13, myFunc);
+
+      // or
+
+      function multiplyBy(num) {
+        // HOF
+        return function (x) {
+          return x * num;
+        };
+      }
+      let double = multiplyBy(2);
+
+      console.log(double(5)); // 10
+
+
+    //   or 
+    // Higher Order Function:
+// Ek aesa function jo kisi dusre function ko apne parameter mein accept kare
+// ya ek function return kare.
+
+// Callback Function:
+// Ek aesa function jo kisi dusre function ko argument ke taur par pass kiya jaye.
+    </script>
+  </body>
+</html>
