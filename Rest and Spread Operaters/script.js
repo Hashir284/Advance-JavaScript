@@ -1,0 +1,10 @@
+// Rest Operator 
+function sum(...numbers) {
+  console.log(numbers);
+}
+sum(1, 2, 3, 4);
+
+let [a, b, ...rest] = [10, 20, 30, 40, 50];
+console.log(a);    // 10
+console.log(b);    // 20
+console.log(rest); // [30, 40, 50]
